@@ -49,5 +49,5 @@ steps:
     azureSubscription: 'Azure subscription 1(899ed6f7-3d13-46c9-8704-878beffb1c0a)'
     appType: 'webApp'
     appName: 'appservicewin'
-    package: '$(Build.ArtifactStagingDirectory)/**/*.zip'
+    package: '$(Build.ArtifactStagingDirectory)/*.zip'
     deploymentMethod: 'auto'
