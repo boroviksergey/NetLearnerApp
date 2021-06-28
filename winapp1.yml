@@ -45,3 +45,11 @@ steps:
     archiveType: 'zip'
     archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
     replaceExistingArchive: true
+
+- task: AzureWebApp@1
+  inputs:
+        azureSubscription: 'Azure subscription 1 (899ed6f7-3d13-46c9-8704-878beffb1c0a)'
+        appType: 'webApp'
+        appName: 'appservicewin'
+        package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+        deploymentMethod: 'auto'
